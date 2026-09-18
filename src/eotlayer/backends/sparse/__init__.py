@@ -1,0 +1,61 @@
+"""Sparse-proxy preconditioners and support construction."""
+
+from .backend import (
+    CuDSSFixedPatternFactorizer,
+    FixedCSRFactorization,
+    SparseWBackend,
+    SparseWDiagnostics,
+    SparseWSolveResult,
+)
+from .cudss import CuDSSFixedCSR, CuDSSPlanMemorySnapshot
+from .ic0 import BlockIC0Preconditioner, IC0Backend
+from .support import (
+    EffectiveResistanceEstimate,
+    EffectiveResistancePaperParameters,
+    EffectiveResistanceSupport,
+    MassThresholdSupport,
+    build_effective_resistance_support,
+    build_heuristic_effective_resistance_support,
+    build_mass_threshold_support,
+    build_relative_strength_support,
+    build_scaled_cuda_upper_grounded_laplacian_proxy,
+    build_scaled_cuda_upper_normal_matrix,
+    build_scaled_grounded_laplacian_proxy,
+    build_scaled_sparse_normal_matrix,
+    effective_resistance_support_to,
+    estimate_effective_resistances,
+    estimate_effective_resistances_torch_jl,
+    effective_resistance_paper_parameters,
+    refresh_fixed_mass_support,
+    update_scaled_cuda_upper_normal_values_,
+)
+
+__all__ = [
+    "BlockIC0Preconditioner",
+    "CuDSSFixedCSR",
+    "CuDSSFixedPatternFactorizer",
+    "CuDSSPlanMemorySnapshot",
+    "EffectiveResistanceEstimate",
+    "EffectiveResistancePaperParameters",
+    "EffectiveResistanceSupport",
+    "FixedCSRFactorization",
+    "IC0Backend",
+    "MassThresholdSupport",
+    "SparseWBackend",
+    "SparseWDiagnostics",
+    "SparseWSolveResult",
+    "build_effective_resistance_support",
+    "build_heuristic_effective_resistance_support",
+    "build_mass_threshold_support",
+    "build_relative_strength_support",
+    "build_scaled_cuda_upper_grounded_laplacian_proxy",
+    "build_scaled_cuda_upper_normal_matrix",
+    "build_scaled_grounded_laplacian_proxy",
+    "build_scaled_sparse_normal_matrix",
+    "effective_resistance_support_to",
+    "estimate_effective_resistances",
+    "estimate_effective_resistances_torch_jl",
+    "effective_resistance_paper_parameters",
+    "refresh_fixed_mass_support",
+    "update_scaled_cuda_upper_normal_values_",
+]

@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "required_infrastructure": [
+    "project-contract.json",
+    "AGENTS.md",
+    ".agents/skills/computational-research-harness/SKILL.md",
+    ".vscode/settings.json",
+    "README.md",
+    "HANDOFF.md",
+    "abstract.md",
+    "latex/.latexmkrc",
+    "slides/.latexmkrc",
+    "pyproject.toml",
+    "src/eotlayer/__init__.py",
+    "tests/test_eotlayer_layer.py",
+    "validate.py"
+  ],
+  "product": {
+    "public_module": "src/eotlayer/__init__.py",
+    "public_symbols": ["EOTLayer"],
+    "entrypoint": "EOTLayer",
+    "signature": "EOTLayer(epsilon, mode, *, iter_num=None, forward_tol=None, forward_iter_max=None, epsilon_scaling_start=None, epsilon_scaling_decay=None, backward_solver=None, backward_tol=None, backward_iter_max=None)",
+    "consumers": [
+      "README.md",
+      "examples/eotlayer_quickstart.py",
+      "examples/eotlayer_interface.py"
+    ]
+  },
+  "paper": {
+    "status": "draft",
+    "target_journal": null,
+    "narrative_files": ["latex/main.tex"],
+    "generated_tables": []
+  }
+}

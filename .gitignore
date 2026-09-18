@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+docs/_build/
+.DS_Store
+Thumbs.db
+preview/
+PREVIEW.md
+docs/api-contract.md
+docs/api-audit.md
+docs/backend-adapter-contract.md
+docs/backend-migration-audit.md
+docs/effective-resistance-gpu-audit.md
+docs/effective-resistance-paper-ledger.md

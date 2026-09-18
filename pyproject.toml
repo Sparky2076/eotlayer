@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "eotlayer"
+version = "0.1.0.dev0"
+description = "PyTorch research package for differentiable entropic optimal transport"
+requires-python = ">=3.10"
+dependencies = ["numpy", "scipy", "torch"]
+
+[project.optional-dependencies]
+cuda = ["nvmath-python>=0.6"]
+test = ["pytest>=8"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["eotlayer*"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+addopts = "-ra"

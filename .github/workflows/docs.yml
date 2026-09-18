@@ -1,0 +1,25 @@
+name: Documentation
+on:
+  push:
+    branches: [codex/documentation, stable]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: docs/requirements.txt
+      - run: python -m pip install -r docs/requirements.txt
+      - run: python scripts/check_docs.py
+      - run: python -m sphinx -b html -W --keep-going docs docs/_build/html
+      - uses: actions/upload-artifact@v4
+        with:
+          name: eotlayer-documentation
+          path: docs/_build/html
