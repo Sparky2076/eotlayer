@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="488" height="110" viewBox="0 0 488 110" role="img" aria-labelledby="title">
+  <title id="title">EOTLayer</title>
+  <g fill="#357fa9">
+    <rect x="8" y="22" width="16" height="16" rx="3"/>
+    <rect x="32" y="22" width="16" height="16" rx="3" opacity=".32"/>
+    <rect x="56" y="22" width="16" height="16" rx="3" opacity=".15"/>
+    <rect x="8" y="46" width="16" height="16" rx="3" opacity=".32"/>
+    <rect x="32" y="46" width="16" height="16" rx="3"/>
+    <rect x="56" y="46" width="16" height="16" rx="3" opacity=".32"/>
+    <rect x="8" y="70" width="16" height="16" rx="3" opacity=".15"/>
+    <rect x="32" y="70" width="16" height="16" rx="3" opacity=".32"/>
+    <rect x="56" y="70" width="16" height="16" rx="3"/>
+  </g>
+  <text x="94" y="77" fill="#343131" font-family="Lato, Helvetica Neue, Arial, sans-serif" font-size="65" font-weight="700" letter-spacing="-2">EOT<tspan fill="#357fa9">Layer</tspan></text>
+</svg>

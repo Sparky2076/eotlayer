@@ -1,15 +1,18 @@
 # EOTLayer
 
 An English Sphinx documentation site for the supplied EOTLayer `0.1.0.dev0`
-source snapshot. It uses **Sphinx Book Theme**, matching the layout family of
-the RLAOpt reference site, with EOTLayer-specific concepts, runnable examples,
-and a source-checked public API reference.
+source snapshot. It uses **Read the Docs Sphinx Theme**, following the documentation
+layout of [TorchOpt](https://torchopt.readthedocs.io/): a searchable left navigation,
+grouped documentation sections, and a clear single-column article. EOTLayer-specific
+concepts, runnable examples, and the source-checked public API are retained.
 
-Source repository: <https://github.com/Sparky2076/eotlayer>.
-Documentation is configured for Read the Docs with project slug `eotlayer` and
-target address `https://eotlayer.readthedocs.io/en/stable/`. Hosting is activated
-by importing this repository into the project owner's Read the Docs account.
-See [Publishing](PUBLISHING.md) for the exact connection settings.
+Source repository: [Sparky2076/eotlayer](https://github.com/Sparky2076/eotlayer).
+The [EOTLayer stable website](https://eotlayer.readthedocs.io/en/stable/) is already
+hosted by the Read the Docs project `eotlayer` and builds from this repository's
+`stable` branch. The project's default version is `latest`, which follows the
+default source branch `codex/documentation`. Updating the requested `/en/stable/`
+site therefore requires updating `stable`, followed by a successful hosted build.
+See [Publishing](PUBLISHING.md) for the existing deployment settings.
 
 ## Browse the built site
 
@@ -27,12 +30,17 @@ Use Python 3.11 or newer for the documentation tools:
 
 ```bash
 python -m pip install -r docs/requirements.txt
+python scripts/check_docs.py
 python -m sphinx -b html -W --keep-going docs docs/_build/html
 ```
 
 No PyTorch or CUDA installation is needed to build the HTML. The real public
 constructor is parsed from `src/eotlayer/layer.py` and checked against the supplied
 `project-contract.json`.
+
+The theme refresh preserves the runtime source snapshot from commit
+`8b1b42f25f779b0ece522c525e3cd7820a82e3ec`. It does not introduce another
+EOTLayer API, add solvers, or declare a PyPI release.
 
 ## Run documented examples
 

@@ -32,28 +32,31 @@ exclude_patterns = [
     "backend-migration-audit.md", "effective-resistance-gpu-audit.md",
     "effective-resistance-paper-ledger.md",
 ]
-html_theme = "sphinx_book_theme"
+html_theme = "sphinx_rtd_theme"
 html_title = "EOTLayer Documentation"
 html_short_title = "EOTLayer"
 html_static_path = ["_static"]
 html_css_files = ["custom.css"]
 html_favicon = "_static/favicon.svg"
+html_logo = "_static/eotlayer-logo.svg"
 html_theme_options = {
-    "repository_url": "https://github.com/Sparky2076/eotlayer",
-    "repository_branch": os.environ.get("READTHEDOCS_GIT_IDENTIFIER", "codex/documentation"),
-    "path_to_docs": "docs",
-    "use_repository_button": True,
-    "use_edit_page_button": True,
-    "use_issues_button": True,
-    "logo": {"text": "EOTLayer"},
-    "home_page_in_toc": True,
-    "show_navbar_depth": 2,
-    "show_toc_level": 2,
+    "logo_only": True,
+    "style_nav_header_background": "#ffffff",
+    "collapse_navigation": False,
+    "sticky_navigation": True,
     "navigation_depth": 3,
-    "use_download_button": False,
-    "use_fullscreen_button": True,
+    "includehidden": True,
+    "titles_only": False,
+    "prev_next_buttons_location": "bottom",
+    "vcs_pageview_mode": "edit",
 }
-html_context = {"default_mode": "light"}
+html_context = {
+    "display_github": True,
+    "github_user": "Sparky2076",
+    "github_repo": "eotlayer",
+    "github_version": os.environ.get("READTHEDOCS_GIT_IDENTIFIER", "stable"),
+    "conf_py_path": "/docs/",
+}
 html_show_sourcelink = False
 html_copy_source = False
 # Local previews do not claim to be a deployed Read the Docs version.
